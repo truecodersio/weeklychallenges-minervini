@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -23,17 +25,28 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            int shortestLength = str1.Length;
+            var listOfStrings = new List<string> { str1, str2, str3, str4 };
+            foreach (var str in listOfStrings)
+            {
+                if (str.Length < shortestLength)
+                {
+                    shortestLength = str.Length;
+                }
+            }
+            return shortestLength; 
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            var listOfInts = new List<int> { number1, number2, number3, number4 };
+            listOfInts.Sort();
+            return listOfInts.ElementAt(0);
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            biz.Name = "TrueCoders";
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
