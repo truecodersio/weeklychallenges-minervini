@@ -61,17 +61,54 @@ namespace ChallengesWithTestsMark8
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            int isNull = 0;
+            int notNull = 0;
+            foreach (var ob in objs)
+            {
+                if (ob == null)
+                {
+                    isNull ++;
+                }
+                else
+                {
+                    notNull ++;
+                }
+            }
+            return isNull > notNull;
         }
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+            double numTotal = 0;
+            double count = 0;
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    numTotal += num;
+                    count++;
+                }
+            }
+            return numTotal / count;
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if (number == 0)
+            {
+                return 1;
+            }
+            var result = 1;
+            while (number != 1)
+            {
+                result = result * number;
+                number = number - 1;
+            }
+            return result;
         }
     }
 }
