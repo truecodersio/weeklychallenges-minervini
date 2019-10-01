@@ -8,9 +8,9 @@ namespace ChallengesWithTestsMark8
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            foreach (var val in vals)
+            foreach(var val in vals)
             {
-                if (val == false)
+                if(val == false)
                     return true;
             }
             return false;
@@ -19,13 +19,13 @@ namespace ChallengesWithTestsMark8
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
             int oddSum = 0;
-            if (numbers == null)
+            if(numbers == null)
             {
                 return false;
             }
-            foreach (var number in numbers)
+            foreach(var number in numbers)
             {
-                if (number % 2 != 0)
+                if(number % 2 != 0)
                 {
                    oddSum += number;
                 }
@@ -35,7 +35,7 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            if (password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsNumber))
+            if(password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsNumber))
             {
                 return true;
             }
@@ -54,7 +54,7 @@ namespace ChallengesWithTestsMark8
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            if (divisor == 0 || dividend == 0)
+            if(divisor == 0 || dividend == 0)
             {
                 return 0;
             }
@@ -70,7 +70,7 @@ namespace ChallengesWithTestsMark8
         {
             int i = 0;
             int[] array = new int[50];
-            for (int Odds = 1; Odds < 100; Odds += 2)
+            for(int Odds = 1; Odds < 100; Odds += 2)
             {
                 array[i] = Odds;
                 i++;
@@ -80,7 +80,7 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            for (int i = 0; i < words.Length; i++)
+            for(int i = 0; i < words.Length; i++)
             {
                 words[i] = words[i].ToUpper();
             }
