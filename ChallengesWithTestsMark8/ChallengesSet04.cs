@@ -51,7 +51,7 @@ namespace ChallengesWithTestsMark8
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            return sideLength1 + sideLength2 > sideLength3 && sideLength1 + sideLength3 > sideLength2 && sideLength2 + sideLength3 > sideLength1;
         }
 
         public bool IsStringANumber(string input)
@@ -93,15 +93,26 @@ namespace ChallengesWithTestsMark8
                     count++;
                 }
             }
+
+            if (numTotal == 0)
+            {
+                return numTotal;
+            }
             return numTotal / count;
         }
 
         public int Factorial(int number)
         {
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             if (number == 0)
             {
                 return 1;
             }
+
             var result = 1;
             while (number != 1)
             {
