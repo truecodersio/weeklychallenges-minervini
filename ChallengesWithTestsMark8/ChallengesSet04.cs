@@ -94,11 +94,11 @@ namespace ChallengesWithTestsMark8
                     count++;
                 }
             }
-            if (numTotal > 0)
+            if (numTotal == 0)
             {
-                return numTotal / count;
+                return numTotal;
             }
-            return numTotal;
+            return numTotal / count;
         }
 
         public int Factorial(int number)
