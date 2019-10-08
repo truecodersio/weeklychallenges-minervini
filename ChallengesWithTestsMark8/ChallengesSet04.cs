@@ -41,6 +41,7 @@ namespace ChallengesWithTestsMark8
         {
             var listOfInts = new List<int> { number1, number2, number3, number4 };
             listOfInts.Sort();
+
             return listOfInts.ElementAt(0);
         }
 
@@ -93,12 +94,11 @@ namespace ChallengesWithTestsMark8
                     count++;
                 }
             }
-
-            if (numTotal == 0)
+            if (numTotal > 0)
             {
-                return numTotal;
+                return numTotal / count;
             }
-            return numTotal / count;
+            return numTotal;
         }
 
         public int Factorial(int number)
@@ -107,12 +107,10 @@ namespace ChallengesWithTestsMark8
             {
                 throw new ArgumentOutOfRangeException();
             }
-
             if (number == 0)
             {
                 return 1;
             }
-
             var result = 1;
             while (number != 1)
             {
